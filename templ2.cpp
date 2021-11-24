@@ -22,6 +22,22 @@ template <typename T, int size> class myArray;
 // Есть метод int memory() который возращает количество занимаемых байт
 // В случае если T bool ведет битовое хранение значений 
 
+
+template <typename T> class binHeap
+{
+	struct BinHeapNode 
+	{
+		T key;
+		vector <*BinHeapNode> childs;
+		int degree;
+	};
+	int treesCount_;
+	vector <*BinHeapNode> tree_roots;
+public:
+	void push(const T & newKey);
+	void merge(const BinHeap<T> & H );
+};
+
 int main()
 {
 	list <int> L;
